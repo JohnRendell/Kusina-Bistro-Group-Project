@@ -1,0 +1,5 @@
+SITE MANAGEMENT SYSTEM/ROOT FOLDERS-------------------------------
+-removed test.php (Ginawa ko last time yun for testing pero di naman na need ngayon since gumana na yung reservation.php)
+-renamed index.php to backup.php
+-removed user data on review table on kusina database
+-finished review.php

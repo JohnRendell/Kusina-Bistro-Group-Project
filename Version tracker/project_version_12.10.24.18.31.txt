@@ -1,0 +1,6 @@
+FILE MANAGEMENT SYSTEM-------------------------------
+fixed syntax error in connection.php
+finished login functionality 
+added index page for the main UI 
+Added log out functionality
+Removed Sign up functionality

@@ -1,0 +1,5 @@
+-Jake
+SITE MANAGEMENT SYSTEM-------------------------------
+Added Basic UI for site management index
+Added sample inputs (not final, no links)
+Created upload for Hero Section Image (Not finished)

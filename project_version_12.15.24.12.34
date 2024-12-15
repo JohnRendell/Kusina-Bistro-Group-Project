@@ -1,0 +1,5 @@
+-Added dished edit function
+-Modify Image delete function
+-add css on addDish.php
+-add alert warning on addDish.php validation
+-Do multiple testing on admin file management, and so far everything is working

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUSINA</title>
+    <link  href="css/account.css" rel="stylesheet">
+        <!-- Google Font -->
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=sunny" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Yuji+Mai&display=swap" rel="stylesheet">
+    
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- Preloader -->
+        <link rel="stylesheet" href="css/preloader.css" type="text/css" media="screen, print" />
+    
+        <!--Web icon-->
+        <link rel="icon" href="IMG/Web Icon Logo.png">
+    
+        <!-- Icon Font-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.default.css">
+        <!-- Animate CSS-->
+        <link rel="stylesheet" href="css/animate.css">
+    
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    
+        <!-- Style -->
+        <link href="css/style.css" rel="stylesheet">
+    
+        <!-- Responsive CSS -->
+        <link href="css/responsive.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="js/lte-ie7.js"></script>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>KUSINA De Profile</h1><a href="index.html">
+            <button type="button" class="btn btn-default submit-btn form_submit" data-dismiss="modal" style="width: 15%; border-radius: 100px; margin-right: -600px; margin-top: -60px;">Back Home</button>
+            </a>
+        </div>
+        <div class="profile-section">
+            <img src="profile-placeholder.jpg" alt="Profile Picture">
+            <div class="profile-info">
+                <h2 class="oswald-misc" style="margin-right: -1000000px;">Elmer Folgoso</h2>
+                <p>Email: EFgolso@example.com</p>
+                <p>Phone: +123456789</p>
+            </div>
+        </div>
+        <div class="tabs">
+            <button class="active" onclick="showTab('overview')">Overview</button>
+            <button onclick="showTab('reservations')">Reservations</button>
+            <button onclick="showTab('reviews')">Reviews</button>
+            <button onclick="showTab('account')">Account</button>
+        </div>
+        <div id="overview" class="tab-content">
+            <h3>Overview</h3>
+            <p>Welcome to your account dashboard! Here, you can manage your reservations, orders, and account settings.</p>
+        </div>
+        <div id="reservations" class="tab-content" style="display: none;">
+            <h3>Reservations</h3>
+            <ul>
+                <li>Table for 2 on Dec 12, 2024 - Confirmed</li>
+                <li>Table for 4 on Dec 15, 2024 - Pending</li>
+            </ul>
+        </div>
+        <div id="reviews" class="tab-content" style="display: none;">
+            <h3>Reviews</h3>
+            <ul>
+                <li>Food is great - 12/14/24</li>
+            </ul>
+        </div>
+        <div id="account" class="tab-content" style="display: none;">
+            <h3>Account Settings</h3>
+            <p>Update your email, password, and other account preferences here.</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.tabs button');
+
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(tabId).style.display = 'block';
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

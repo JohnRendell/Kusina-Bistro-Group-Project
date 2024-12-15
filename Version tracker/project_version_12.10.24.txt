@@ -1,0 +1,6 @@
+FINISHED THE CAROUSEL FOR HERO PAGE**
+DISPLAYED CTA - Buttons for MENUS**
+	|-- Need to work on the menu layout after CTA
+ADDED CUSTOM FONTS LINK AND IMAGES ETC**
+FOLDER MUSIC_AMBIENCE IS EXPERIMENTAL
+	|-- Personal Preference only, just wanted to try and add some bg music(I haven't did it)

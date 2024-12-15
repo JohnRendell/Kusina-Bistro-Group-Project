@@ -1,0 +1,6 @@
+-Jake
+SITE MANAGEMENT SYSTEM-------------------------------
+Deleted edit_HeroImage.php and edit_HeroText.php
+Created hero_images file for Hero image CRUD
+Finished functional Hero section edit (upload/update)
+Created show existing content in index.php 

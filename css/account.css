@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    overflow-y: auto; /* Enables vertical scrolling */
+    height: 100%; /* Ensures full height for scroll calculation */
+}
+
+html {
+    height: 100%; /* Ensures the root element can scroll */
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 100vh; /* Ensures the container spans the full height */
+}
+
+.header {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.profile-section {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-right: -1000px;
+}
+
+.profile-info p {
+    color: #777;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background: #f3f3f3;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #f3f3f3;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tabs button:hover,
+.tabs button.active {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tab-content ul {
+    list-style: none;
+}
+
+.tab-content ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.tab-content ul li:last-child {
+    border-bottom: none;
+}
+
+.oswald-misc {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }

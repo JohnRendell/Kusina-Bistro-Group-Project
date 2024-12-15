@@ -1,0 +1,8 @@
+-Minor changes replace index.html with ../ at review.php
+-Minor changes replace index.html with ../ at reservation.php, add a validation for selecting branches
+-Added delete review at file management
+-Added update review at file management
+-Added insert review via admin dashboard at file management
+-Added insert reservation via admin dashboard at file management
+-Added delete reservation at file management
+-Added update reservation at file management
