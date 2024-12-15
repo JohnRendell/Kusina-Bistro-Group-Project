@@ -38,7 +38,7 @@ function displayReservation()
 {
      require __DIR__ . "/connection.php";
 
-     $stmt = $pdo->prepare("SELECT * FROM kusina.reservation");
+     $stmt = $pdo->prepare("SELECT * FROM reservation");
 
      $stmt->execute();
 
@@ -52,7 +52,7 @@ function displayReview()
 {
      require __DIR__ . "/connection.php";
 
-     $stmt = $pdo->prepare("SELECT * FROM kusina.review");
+     $stmt = $pdo->prepare("SELECT * FROM review");
 
      $stmt->execute();
 
@@ -66,7 +66,7 @@ function displayDish()
 {
      require __DIR__ . "/connection.php";
 
-     $stmt = $pdo->prepare("SELECT * FROM kusina.dishes");
+     $stmt = $pdo->prepare("SELECT * FROM dishes");
 
      $stmt->execute();
 
@@ -100,7 +100,7 @@ function displayHeroImage()
 {
      require __DIR__ . "/connection.php";
 
-     $stmt = $pdo->prepare("SELECT * FROM kusina.hero_content");
+     $stmt = $pdo->prepare("SELECT * FROM hero_content");
 
      $stmt->execute();
 

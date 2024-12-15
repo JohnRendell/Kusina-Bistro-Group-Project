@@ -2,7 +2,7 @@
 function displayReview()
 {
     require __DIR__ . "./siteManagementSystem/connection.php";
-    $stmt = $pdo->prepare("SELECT * FROM kusina.review");
+    $stmt = $pdo->prepare("SELECT * FROM review");
 
     $stmt->execute();
 
@@ -14,7 +14,7 @@ function displayReview()
 function displayHero()
 {
     require __DIR__ . "./siteManagementSystem/connection.php";
-    $stmt = $pdo->prepare("SELECT * FROM kusina.hero_content");
+    $stmt = $pdo->prepare("SELECT * FROM hero_content");
 
     $stmt->execute();
 
@@ -26,7 +26,7 @@ function displayHero()
 function displayDish()
 {
     require __DIR__ . "./siteManagementSystem/connection.php";
-    $stmt = $pdo->prepare("SELECT * FROM kusina.dishes");
+    $stmt = $pdo->prepare("SELECT * FROM dishes");
 
     $stmt->execute();
 

@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])){
     try {
 
         //sql for inserting datas into review
-        $sql = "INSERT INTO kusina.review(user, userReview, userRating) VALUES(:user, :userReview, :userRating)";
+        $sql = "INSERT INTO review(user, userReview, userRating) VALUES(:user, :userReview, :userRating)";
 
         //prepare statement
         $stmt = $pdo->prepare($sql);

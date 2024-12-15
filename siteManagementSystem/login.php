@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   require __DIR__ . "/connection.php";
 
-  $sql = "SELECT * FROM kusina.admin_acc 
+  $sql = "SELECT * FROM admin_acc 
                WHERE username = :username";
 
   $stmt = $pdo->prepare($sql);

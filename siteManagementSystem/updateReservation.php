@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dateTime = $_POST['dateTime'];
     $message = htmlspecialchars($_POST['message']);
 
-    $sql = "UPDATE kusina.reservation SET name = :name, location = :location, reserveDate = :reserveDate, additionalMessage = :additionalMessage WHERE id = :id";
+    $sql = "UPDATE reservation SET name = :name, location = :location, reserveDate = :reserveDate, additionalMessage = :additionalMessage WHERE id = :id";
 
     $stmt = $pdo->prepare($sql);
 

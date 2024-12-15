@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $review = htmlspecialchars($_POST['review']);
     $rating = $_POST['rating'];
 
-    $sql = "UPDATE kusina.review SET user = :username, userReview = :review, userRating = :rating WHERE id = :id";
+    $sql = "UPDATE review SET user = :username, userReview = :review, userRating = :rating WHERE id = :id";
 
     $stmt = $pdo->prepare($sql);
 

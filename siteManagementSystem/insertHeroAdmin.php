@@ -23,7 +23,7 @@ function uploadImage(){
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //sql for inserting datas into review
-    $sql = "INSERT INTO kusina.hero_content(dir) VALUES(:dir)";
+    $sql = "INSERT INTO hero_content(dir) VALUES(:dir)";
 
     //prepare statement
     $stmt = $pdo->prepare($sql);

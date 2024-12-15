@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($submit)) {
 
             if (in_array(strtoupper($location), $branches)) {
                 //sql for inserting datas into reservation
-                $sql = "INSERT INTO kusina.reservation(name, location, reserveDate, additionalMessage) VALUES(:name, :location, :reserveDate, :additionalMessage)";
+                $sql = "INSERT INTO reservation(name, location, reserveDate, additionalMessage) VALUES(:name, :location, :reserveDate, :additionalMessage)";
 
                 //prepare statement
                 $stmt = $pdo->prepare($sql);

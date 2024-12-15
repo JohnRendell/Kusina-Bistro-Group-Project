@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
     try {
         $uploadImage = uploadImage() !== "No Image Upload" ? uploadImage() : $_POST['prevImage'];
-        $sql = "UPDATE kusina.dishes SET dishName = :dishName, description = :description, quotes = :quotes, tag = :tag, image = :image WHERE ID = :ID";
+        $sql = "UPDATE dishes SET dishName = :dishName, description = :description, quotes = :quotes, tag = :tag, image = :image WHERE ID = :ID";
 
         $stmt = $pdo->prepare($sql);
 
