@@ -2,8 +2,35 @@
 
 require __DIR__ . "/connection.php";
 
+$sql = "SELECT COUNT(*) AS row_count FROM dishes";
+
+$stmt = $pdo->prepare($sql);
+
+
+$stmt->execute();
+
+
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
-    if ($_POST['dishName'] !== '') {
+    if ($result['row_count'] < 6){
+       if ($_POST['dishName'] !== '') {
+
+        
+        // Checks for duplicates
+
+        $sql = "SELECT COUNT(*) AS count FROM dishes WHERE dishName = :dishName";
+
+        $stmt = $pdo->prepare($sql);
+
+
+
+        $stmt->execute(["dishName" => $_POST['dishName']]);
+
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($result['count'] == 0){
 
         // File upload handling
         $imagePath = '';
@@ -61,15 +88,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                 echo "<script>alert('Dish added successfully.')</script>";
                 echo "<script>window.location.href = '../siteManagementSystem';</script>";
             } catch (PDOException $e) {
-                echo "<script>alert('Dish Name already exist'); </script>";
+                echo "Error: " . $e->getMessage();
             }
         } else {
             echo "<script>alert('Upload image first')</script>";
         }
+     }else{
+        echo "<script>alert('Dish already exist')</script>";
+     }
+
     } else {
         echo "<script>alert('Must Enter Dish Name')</script>";
     }
+ }else{
+    echo "<script>alert('Record limit reached! Please Delete a record before adding')</script>";
+ }
 }
+
 
 ?>
 
@@ -93,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
             <h1>ADD DISH FOR BREAKFAST</h1>
 
             <form method="POST" enctype="multipart/form-data" id="formStuff">
-                Name: <input type="text" id="dishName" name="dishName" placeholder="dish name...">
+                <label for="dishName">Name:</label> <input type="text" id="dishName" name="dishName" placeholder="dish name...">
                 <br><br>
 
                 Description: <input type="text" id="description" name="description" placeholder="description...">
@@ -105,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                 Tag: <input type="text" id="tag" name="tag" placeholder="tag...">
                 <br><br>
 
-                Image: <input type="file" id="dish_Image" name="dish_Image" accept="Image/jpg, Image/jpeg, Image/png">
+                Image: <input type="file" id="dish_Image" name="dish_Image">
                 <br><br>
 
                 <input type="submit" name="submit" value="Add" id="submitBtn">
